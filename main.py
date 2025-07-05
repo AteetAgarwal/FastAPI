@@ -6,7 +6,6 @@ from typing import Optional
 import os
 from dotenv import load_dotenv
 import json
-from youtube_transcript_api import YouTubeTranscriptApi
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
 import logging
