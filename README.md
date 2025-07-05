@@ -27,7 +27,7 @@ A FastAPI-based REST API for fetching YouTube video transcripts with Azure Key V
 
 1. **Clone and setup**:
    ```bash
-   cd "c:\D\Search\Lutron.YouTubeTranscriptAPI"
+   cd "{PythonFastAPI}"
    ```
 
 2. **Install dependencies**:
@@ -81,35 +81,9 @@ The application loads the YouTube API key in the following order:
 
 ## API Usage Examples
 
-### Get Transcript (POST)
-```bash
-curl -X POST "http://localhost:8000/api/transcript" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "video_id": "dQw4w9WgXcQ",
-    "languages": ["en"]
-  }'
-```
-
-### Get Transcript (GET)
-```bash
-curl "http://localhost:8000/api/transcript/dQw4w9WgXcQ?languages=en,es"
-```
 
 ### Response Format
-```json
-{
-  "video_id": "dQw4w9WgXcQ",
-  "transcript": [
-    {
-      "text": "Never gonna give you up",
-      "start": 0.0,
-      "duration": 3.5
-    }
-  ],
-  "language": "en"
-}
-```
+
 
 ## Deployment to AKS
 
@@ -186,7 +160,7 @@ Once running, visit:
 
 The application uses structured logging. Check container logs:
 ```bash
-kubectl logs -f deployment/youtube-transcript-api
+kubectl logs -f deployment/PythonFastAPI
 ```
 
 ## License
